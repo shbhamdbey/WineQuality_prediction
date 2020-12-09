@@ -27,7 +27,7 @@ predictions = model.predict(datardd.map(lambda x: x.features))
 
 labels_and_predictions = datardd.map(lambda x: x.label).zip(predictions)
 
-acc = labels_and_predictions.filter(lambda x: x[0] == x[1]).count() / float(datardd.count())
+accu = labels_and_predictions.filter(lambda x: x[0] == x[1]).count() / float(datardd.count())
 
 
 
@@ -39,6 +39,6 @@ f1 = metrics.fMeasure()
 
 
 
-print("Model accuracy: %.3f%%" % (acc * 100))
+print("Model accuracy: %.3f%%" % (accu * 100))
 
 print("F1 Score = %s" % f1)
