@@ -25,7 +25,7 @@ spark = SparkSession(sc)
 
 # In[ ]:
 
-model = RandomForestModel.load(sc,"s3://Bucket_name/randomforestmodel.model/")
+model = RandomForestModel.load(sc,"randomforestmodel.model/")
 
 
 
