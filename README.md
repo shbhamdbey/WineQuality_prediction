@@ -1,5 +1,5 @@
-#### WineQuality_prediction
-##To Run Model Training on 4 Parallel EC2 Instances using EMR on AWS
+# WineQuality_prediction
+## To Run Model Training on 4 Parallel EC2 Instances using EMR on AWS
 
 Create cluster using following steps
 
@@ -18,7 +18,7 @@ a) Command:  aws s3 cp s3://bucket_name/file_name
 8. The model will be saved to the exiting passed path of the bucket.
 
 
-##To Run Model Prediction on single EC2 Instance without Docker
+## To Run Model Prediction on single EC2 Instance without Docker
 Preprocess Configuration log:
  a) Create EC2 instance 
  b) configure with spark
@@ -29,7 +29,7 @@ To Run the model:
 3) Run the program using spark-submit Prediction.py
 
 
-##To Run Model Prediction on single EC2 Instance with Docker
+## To Run Model Prediction on single EC2 Instance with Docker
 Preprocess Configuration log:
 a) Ec2 instance is created
 b) It has docker installed on it
@@ -38,8 +38,8 @@ b) It has docker installed on it
 
 2) docker pull 
 
-	docker pull shubham973979/final-project-2-sd858
+	 docker pull shubham973979/final-project-2-sd858
 
 3)  Run this command from the current directory of Validation file:
 
- docker run -it -v "$(pwd)":/file shubham973979/final-project-2-sd858
+	 docker run -it -v "$(pwd)":/file shubham973979/final-project-2-sd858
